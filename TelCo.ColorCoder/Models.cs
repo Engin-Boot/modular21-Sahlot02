@@ -3,10 +3,10 @@ using System.Diagnostics;
 using System.Drawing;
 namespace TelCo.ColorCoder
 {
-    class ColorMap
+    public class ColorMap
     {
-        protected readonly static Color[] colorMapMajor;
-        protected readonly static Color[] colorMapMinor;
+        public readonly static Color[] colorMapMajor;
+        public readonly static Color[] colorMapMinor;
 
         static ColorMap()
         {

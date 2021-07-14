@@ -4,13 +4,13 @@ using System.Drawing;
 
 namespace TelCo.ColorCoder
 {
-    class UsingPairNumber:ColorMap
+    class getColorPair
     {
         public static ColorPair GetColorFromPairNumber(int pairNumber)
         {
             // The function supports only 1 based index. Pair numbers valid are from 1 to 25
-            int minorSize = colorMapMinor.Length;
-            int majorSize = colorMapMajor.Length;
+            int minorSize = ColorMap.colorMapMinor.Length;
+            int majorSize = ColorMap.colorMapMajor.Length;
             if (pairNumber < 1 || pairNumber > minorSize * majorSize)
             {
                 throw new ArgumentOutOfRangeException(
@@ -25,8 +25,8 @@ namespace TelCo.ColorCoder
             // Construct the return val from the arrays
             ColorPair pair = new ColorPair()
             {
-                majorColor = colorMapMajor[majorIndex],
-                minorColor = colorMapMinor[minorIndex]
+                majorColor = ColorMap.colorMapMajor[majorIndex],
+                minorColor = ColorMap.colorMapMinor[minorIndex]
             };
 
             // return the value
