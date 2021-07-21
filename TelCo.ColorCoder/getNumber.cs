@@ -6,9 +6,9 @@ namespace TelCo.ColorCoder
 {
     class getNumber
     {
-        private static int setIndex(Color[]colorArray,Color colorVal)
+        private static int setIndex(Color[] colorArray, Color colorVal)
         {
-            for(int i = 0; i <colorArray.Length;i++)
+            for (int i = 0; i < colorArray.Length; i++)
             {
                 if (colorVal == colorArray[i]) return i;
             }
@@ -18,10 +18,10 @@ namespace TelCo.ColorCoder
         public static int GetPairNumberFromColor(ColorPair pair)
         {
             // Find the major color in the array and get the index
-            int majorIndex =setIndex(ColorMap.colorMapMajor,pair.majorColor);
-            int minorIndex =setIndex(ColorMap.colorMapMinor, pair.minorColor);
+            int majorIndex = setIndex(ColorMap.colorMapMajor, pair.majorColor);
+            int minorIndex = setIndex(ColorMap.colorMapMinor, pair.minorColor);
 
-            
+
             // If colors can not be found throw an exception
             if (majorIndex == -1 || minorIndex == -1)
             {
